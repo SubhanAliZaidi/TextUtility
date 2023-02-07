@@ -12,31 +12,31 @@ export default function TextUtils(props) {
     }
     const [textposition, settextposition] = useState('Copy Text')
 
-    const uppercase = () => {
+    function uppercase() {
         return updateMessage(message.toUpperCase())
     }
-    const lowercase = () => {
+    function lowercase() {
         return updateMessage(message.toLowerCase())
     }
-    const clearfunction = () => {
+    function clearfunction() {
         return updateMessage('')
     }
-    const reversestr = () => {
+    function reversestr() {
         return updateMessage(message.split("").reverse().join(""));
     }
-    const dashseperator = () => {
+    function dashseperator() {
         return updateMessage(message.split(' ').join("-"));
     }
-    const dashremover = () => {
+    function dashremover() {
         return updateMessage(message.split('-').join(" "));
     }
-    const allSpaceRemover = () => {
+    function allSpaceRemover() {
         return updateMessage(message.split(' ').join(""));
     }
-    const spaceRemover = () => {
+    function spaceRemover() {
         return updateMessage(message.split(/\s+/).join(" "));
     }
-    const singleSpaceRemover = () => {
+    function singleSpaceRemover() {
         return updateMessage(message.split("  ").join(" "));
     }
     function toTitleCase() {
@@ -44,7 +44,7 @@ export default function TextUtils(props) {
             return (word.charAt(0).toUpperCase() + word.slice(1))
         }).join(' '))
     }
-    const copyToClipboard = () => {
+    function copyToClipboard() {
         const changeText = () => {
             settextposition('Copy Again')
         }
@@ -52,7 +52,7 @@ export default function TextUtils(props) {
         settextposition('Copied Successfully')
         setTimeout(changeText, 2000)
     }
-    const onchangehandler = (event) => {
+    function onchangehandler(event) {
         updateMessage(event.target.value)
     }
 
