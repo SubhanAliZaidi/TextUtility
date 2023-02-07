@@ -1,6 +1,7 @@
 // Naziya = "naziya"
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 function Navbar(props) {
 
@@ -15,10 +16,10 @@ function Navbar(props) {
                     <div className = "collapse navbar-collapse backdark" id="navbarSupportedContent">
                         <ul className = "navbar-nav me-auto mb-2 mb-lg-0">
                             <li className = "nav-item">
-                                <a className = "navbarcss backdark mx-3" aria-current = "page" href = "/">Home</a>
+                                <Link className = "navbarcss backdark mx-3" aria-current = "page" to = "/">Home</Link>
                             </li>
                             <li className = "nav-item">
-                                <a className = "navbarcss backdark mx-2" aria-current = "page" href = "/">{props.aboutText}</a>
+                                <Link className = "navbarcss backdark mx-2" aria-current = "page" to = "/About">{props.aboutText}</Link>
                             </li>
                         </ul>
                         <div className="form-check form-switch mx-3" onClick={props.mode}>

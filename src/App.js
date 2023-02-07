@@ -1,28 +1,28 @@
 // Naziya = "naziya"
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import './App.css';
 import Alert from './components/Alert.js';
 import Footer from './components/Footer';
-import Navbar from './components/Navbar.js'
-import TextUtils from './components/TextUtils.js'
+import Navbar from './components/Navbar.js';
+import About from './components/About.js';
+import TextUtils from './components/TextUtils.js';
 import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom"
+    BrowserRouter as Router,
+    Routes, Route
+} from "react-router-dom";
 
 export default function App() {
 
     const [zlert, setzlert] = useState(null)
 
-    const showAlert = (message, type) => {
+    const showAlert = (message, type,timing) => {
         setzlert({
             msg: message,
             typ: type
         })
         setTimeout(() => {
-
             setzlert(null)
-        }, 1000);
+        }, timing);
     }
 
     const enableDarkMode = () => {
@@ -39,10 +39,17 @@ export default function App() {
 
     return (
         <>
-            <Navbar title='NAZLOOP' aboutText='About Us' mode={enableDarkMode} />
-            <Alert alert={zlert} />
-            <TextUtils showAlert={showAlert} />
-            <Footer />
+            <Router>
+                <Navbar title='NAZLOOP' aboutText='About Me' mode={enableDarkMode} />
+                <Alert alert={zlert} />
+                <Routes>
+                    <Route path='/' element={<TextUtils showAlert={showAlert} />} />
+                    <Route path='/About' element={<About />} />
+                </Routes>
+                <Footer />
+            </Router>
+            {/* <About /> */}
+            {/* <TextUtils showAlert={showAlert} /> */}
         </>
     );
 }

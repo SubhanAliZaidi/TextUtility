@@ -3,26 +3,18 @@ import React from 'react'
 export default function Footer(props) {
     return (
         <>
-            <hr className='mt-5'/>
+            <hr className='mt-5' />
             <div className="container">
                 <footer className=" container page-footer font-small cyan darken-3">
-                        <p className="container d-flex align-item-center justify-content-center">Contact Us</p>
+                    <p className="container d-flex align-item-center justify-content-center">Contact Us</p>
                     <div className="container">
-                        <div className="row">
+                        <div className="row my-auto">
                             <div className="col-md-12">
                                 <div className="d-flex align-item-center justify-content-center">
-                                    <a className="fb-ic mx-1">
-                                        <img src="assets/icon/facebooklogo.png" alt="" width='30px' height='30px' />
-                                    </a>
-                                    <a className="tw-ic mx-1">
-                                        <img src="assets/icon/linkedin.png" alt="" width='30px' height='30px' />
-                                    </a>
-                                    <a className="gplus-ic mx-1">
-                                        <img src="assets/icon/telegramlogo.png" alt="" width='30px' height='30px' />
-                                    </a>
-                                    <a className="li-ic mx-1">
-                                        <img src="assets/icon/instalogo.png" alt="" width='30px' height='30px' />
-                                    </a>
+                                    <img className='mx-1' src="assets/icon/facebooklogo.png" alt="" width='30px' height='30px' />
+                                    <img src="assets/icon/linkedin.png" style={{marginTop:'2px'}} alt="" width='27px' height='27px' />
+                                    <img className='mx-1' src="assets/icon/telegramlogo.png" style={{marginTop:'1px'}} alt="" width='27px' height='27px' />
+                                    <img src="assets/icon/instalogo.png" alt="" width='30px' height='30px' />
                                 </div>
                             </div>
                         </div>
