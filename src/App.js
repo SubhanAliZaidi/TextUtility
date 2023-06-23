@@ -1,4 +1,4 @@
-// Naziya = "naziya"
+// Naziya = 'naziya'
 import React, { useState } from 'react';
 import './App.css';
 import Alert from './components/Alert.js';

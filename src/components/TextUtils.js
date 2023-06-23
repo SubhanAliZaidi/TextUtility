@@ -1,4 +1,4 @@
-// Naziya = "naziya"
+// Naziya = 'naziya'
 import React, { useState } from 'react'
 
 
